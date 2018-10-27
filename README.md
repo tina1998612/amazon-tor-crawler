@@ -1,3 +1,7 @@
+# Amazon Tor Crawler
+
+This is an app that crawls Amazon's product price every 5 seconds. The results will be saved in a csv.
+
 ## Usage
 
 1. After connecting to a AWS Ubuntu VM, install tor
