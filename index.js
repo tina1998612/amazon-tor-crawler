@@ -1,6 +1,8 @@
 var tr = require("tor-request");
 var scraper = require('product-scraper');
 var fs = require('fs');
+var PriceFinder = require('price-finder');
+var priceFinder = new PriceFinder();
 
 // configure to programmatically refresh the Tor session without restarting Tor client
 tr.TorControlPort.password = "giraffe";
@@ -26,13 +28,21 @@ function requestIP() {
 }
 
 function crawl() {
-  scraper.init('https://www.amazon.com/dp/B009PCI2JU', function (data) {
-    let result = data.price + ", ";
-    console.log(result);
-    fs.appendFile('amazon.csv', result, function (err) {
-      if (err) throw err;
-      console.log('Saved!');
-    });
+  //scraper.init('https://www.amazon.com/dp/B009PCI2JU', function (data) {
+  //let result = data.price + ", ";
+  //console.log(result);
+  //fs.appendFile('amazon.csv', result, function (err) {
+  //  if (err) throw err;
+  //  console.log('Saved!');
+  //});
+  //});
+  priceFinder.findItemPrice('https://www.amazon.com/dp/B009PCI2JU', function (err, price) {
+    if (!err) {
+      fs.appendFile('amazon.csv', price, function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+      });
+    } else console.log(err)
   });
 
 }

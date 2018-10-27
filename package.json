@@ -12,6 +12,7 @@
   "dependencies": {
     "amazon-products": "0.0.9",
     "fs": "0.0.1-security",
+    "price-finder": "^5.0.0",
     "product-scraper": "^0.1.1",
     "tor-request": "^2.3.0"
   }
