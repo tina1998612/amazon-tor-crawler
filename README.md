@@ -23,7 +23,13 @@ $54.99,
 
 ## Usage
 
-1. After connecting to a AWS Ubuntu VM, install tor
+1. Connect to a AWS Ubuntu VM
+
+```
+ssh -i "~/hack/aws/tom-amazon-crawler.pem" ubuntu@ec2-18-219-3-201.us-east-2.compute.amazonaws.com
+```
+
+2. Install Tor
 
 ```
 sudo apt-get update
@@ -71,4 +77,18 @@ npm install
 
 ```
 npm start
+```
+
+7. Real time visualizing how the output file amazon.csv changes
+
+```
+tail -f amazon.csv
+```
+
+8. Run the whole process in the background and gently disconnect with the AWS instance
+
+```
+nohup bash init.sh &
+disown <PID>
+exit
 ```
