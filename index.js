@@ -38,7 +38,7 @@ function crawl() {
   //});
   priceFinder.findItemPrice('https://www.amazon.com/dp/B009PCI2JU', function (err, price) {
     if (!err && price != undefined) {
-      fs.appendFile('amazon.csv', price, function (err) {
+      fs.appendFile('amazon.csv', price + ", ", function (err) {
         if (err) throw err;
         console.log(price, 'Saved!');
       });
