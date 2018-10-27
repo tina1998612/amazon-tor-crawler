@@ -37,10 +37,10 @@ function crawl() {
   //});
   //});
   priceFinder.findItemPrice('https://www.amazon.com/dp/B009PCI2JU', function (err, price) {
-    if (!err) {
+    if (!err && price != undefined) {
       fs.appendFile('amazon.csv', price, function (err) {
         if (err) throw err;
-        console.log('Saved!');
+        console.log(price, 'Saved!');
       });
     } else console.log(err)
   });
