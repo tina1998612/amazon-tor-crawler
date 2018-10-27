@@ -2,8 +2,24 @@
 
 This is an app that crawls Amazon's product price every 5 seconds. It uses the NPM package [tor-request](https://github.com/talmobi/tor-request) to send http requests through Tor. The crawling results will be saved in a csv.
 
-This is a screenshot of the console output:
-![demo](https://i.imgur.com/2C0MLI2.png)
+This the console output after successfully running this app:
+
+```
+Your public (through Tor) IP is: 199.87.154.255
+$54.99,
+Saved!
+Your public (through Tor) IP is: 95.130.9.90
+$54.99,
+Saved!
+Your public (through Tor) IP is: 37.187.94.86
+$54.99,
+Saved!
+Your public (through Tor) IP is: 37.187.94.86
+$54.99,
+Saved!
+Your public (through Tor) IP is: 176.10.99.200
+$54.99,
+```
 
 ## Usage
 
