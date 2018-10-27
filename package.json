@@ -1,0 +1,17 @@
+{
+  "name": "tom_amazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amazon-products": "0.0.9",
+    "fs": "0.0.1-security",
+    "product-scraper": "^0.1.1",
+    "tor-request": "^2.3.0"
+  }
+}
